@@ -1,3 +1,0 @@
-2021-10-16 01:06:40,962:create_Student_db:INFO:Databases successfully created
-2021-10-16 01:06:41,518:create_view_table_db:INFO:View Created for the specified tables
-2021-10-16 01:06:41,727:drop_view_of_table:INFO:View Deleted for the specified tables
