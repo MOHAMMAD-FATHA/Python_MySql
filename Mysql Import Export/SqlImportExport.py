@@ -35,8 +35,8 @@ class MysqlImportExport:
             This function is used to export the database to file or dump DB to a file
         '''
         try:
-            os.system("mysqldump -h 127.0.0.1 -u root -p  employee_payroll_db > emp_view_file.sql")
-            print(os.system("head -n 5 emp_view_file.sql"))
+            os.system('mysqldump -h 127.0.0.1 -u root -p  employee_payroll_db > emp_view_file.sql')
+            print(os.system('head -n 5 emp_view_file.sql'))
             logger.info("Databases Exported to file")
         except Exception as e:
             logger.error("Exception Occured",e)
@@ -48,7 +48,7 @@ class MysqlImportExport:
         '''
         try:
             self.db_connection.execute("CREATE DATABASE Emp_file_db")
-            os.system("mysql -u username -p Emp_file_db < emp_view_file.sql")
+            os.system('mysql -u username -p Emp_file_db < emp_view_file.sql')
             self.db_connection.execute("SHOW DATABASES")
             for db in self.db_connection:
                 print(db)
@@ -60,6 +60,6 @@ class MysqlImportExport:
 
 if __name__ == '__main__':
     importexport = MysqlImportExport()
-    importexport.export_database
-    importexport.import_to_database
+    importexport.export_database()
+    importexport.import_to_database()
     
